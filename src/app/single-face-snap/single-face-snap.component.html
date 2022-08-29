@@ -4,7 +4,8 @@
     <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
     <p>{{ faceSnap.description }}</p>
     <p>
-      <button (click)="onSnap()">{{ buttonText }}</button>
+    
+<button (click)="onSnap(faceSnap.id)">{{ buttonText }}</button>
       🤌 {{ faceSnap.snaps }}
     </p>
 <a routerLink="/facesnaps">Back</a>
