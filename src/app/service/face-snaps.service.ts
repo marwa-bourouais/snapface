@@ -40,17 +40,21 @@ export class FaceSnapsService {
       return this.http.get<FaceSnap[]>('http://localhost:3000/facesnaps');
   
 }
-getFaceSnapById(faceSnapId: number): FaceSnap {
-    const faceSnap = this.faceSnaps.find(faceSnap => faceSnap.id === faceSnapId);
+
+
+  getFaceSnapById(faceSnapId: number): Observable<FaceSnap> {
+    return this.http.get<FaceSnap>(`http://localhost:3000/facesnaps/${faceSnapId}`);
+}
+    /*const faceSnap = this.faceSnaps.find(faceSnap => faceSnap.id === faceSnapId);
     if (!faceSnap) {
         throw new Error('FaceSnap not found!');
     } else {
         return faceSnap;
-    }
-  }
+    }*/
+  
   snapFaceSnapById(faceSnapId: number, snapType: 'snap' | 'unsnap'): void {
     const faceSnap = this.getFaceSnapById(faceSnapId);
-    snapType === 'snap' ? faceSnap.snaps++ : faceSnap.snaps--;
+    //snapType === 'snap' ? faceSnap.snaps++ : faceSnap.snaps--;
 }
 
 
