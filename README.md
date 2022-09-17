@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
+# Snapface
+Snapface is the result app of the two courses of angular in openclassrooms , which are :
+
+https://openclassrooms.com/fr/courses/7471261-debutez-avec-angular/7471268-tirez-le-maximum-de-ce-cours
+
+https://openclassrooms.com/fr/courses/7471271-completez-vos-connaissances-sur-angular
+
+This app is dedicated to share images , it needs a backend : https://github.com/marwa-bourouais/angular-intermediate-backend
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
